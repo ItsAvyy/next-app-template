@@ -1,36 +1,7 @@
-import { Metadata } from "next"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-
-export const metadata: Metadata = {
-  title: "Next.js",
-  description:
-    "Next.js template for building apps with Radix UI and Tailwind CSS",
-  keywords: ["Next.js", "React", "Tailwind CSS", "Radix UI"],
-  authors: [{ name: "shadcn", url: "https://shadcn.com/" }],
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
-  ],
-  openGraph: {
-    title: "Next.js",
-    description:
-      "Next.js template for building apps with Radix UI and Tailwind CSS",
-    url: "https://template.shadcn.com/",
-    siteName: "Next.js",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Next.js template",
-    description:
-      "Next.js template for building apps with Radix UI and Tailwind CSS",
-    creator: "@shadcn",
-  },
-}
 
 export default function Page() {
   return (

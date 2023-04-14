@@ -1,15 +1,48 @@
 import { Inter } from "next/font/google"
 
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/SiteHeader"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import "@/styles/globals.css"
+import { Metadata } from "next"
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description:
+    "Next.js template for building apps with Radix UI and Tailwind CSS",
+  keywords: ["Next.js", "React", "Tailwind CSS", "Radix UI"],
+  authors: [{ name: "shadcn", url: "https://shadcn.com/" }],
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
+  openGraph: {
+    title: "Next.js",
+    description:
+      "Next.js template for building apps with Radix UI and Tailwind CSS",
+    url: "https://template.shadcn.com/",
+    siteName: "Next.js",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js template",
+    description:
+      "Next.js template for building apps with Radix UI and Tailwind CSS",
+    creator: "@shadcn",
+  },
+}
 
 export default function RootLayout({
   children,
